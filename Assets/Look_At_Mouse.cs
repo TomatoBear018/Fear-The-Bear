@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Look_At_Mouse : MonoBehaviour
@@ -9,5 +7,4 @@ public class Look_At_Mouse : MonoBehaviour
     public GameObject tongue;
     public GameObject eye_L;
     public GameObject eye_R;
-
 }
