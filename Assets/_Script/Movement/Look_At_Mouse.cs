@@ -24,27 +24,10 @@ public class Look_At_Mouse : MonoBehaviour
     private void Update()
     {
         if (mainCam == null) return;
-        if (Input.GetMouseButton(0))
-        {
-            tongue.SetActive(true);
-            Vector3 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-            mousePos.z = 0f;
+        Vector3 mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = 0f;
 
-            eye_L.transform.position = _leftEyeController.OrbitBasedOnMouse(mousePos, percent);
-            eye_R.transform.position = _rightEyeController.OrbitBasedOnMouse(mousePos, percent);
-        }
-        else
-        {
-            tongue.SetActive(false);
-        }
-
-        // float angle = Mathf.Atan2(mousePos.y, mousePos.x);
-        // float y = Mathf.Sin(angle) * radius;
-        // float x = Mathf.Cos(angle) * radius;
-        // Debug.Log("x: " + x + " y: " + y);
-        // var left = eye_L.transform.position;
-        // eye_L.transform.position = new Vector3(x + left.x, y + left.y, 0f);
-        // var right = eye_R.transform.position;
-        // eye_R.transform.position = new Vector3(x + right.x, y + right.y, 0f);
+        eye_L.transform.position = _leftEyeController.OrbitBasedOnMouse(mousePos, percent);
+        eye_R.transform.position = _rightEyeController.OrbitBasedOnMouse(mousePos, percent);
     }
 }

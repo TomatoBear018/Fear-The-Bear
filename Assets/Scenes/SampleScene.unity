@@ -258,8 +258,8 @@ MonoBehaviour:
   tongue: {fileID: 1566317945}
   eye_L: {fileID: 759836886}
   eye_R: {fileID: 1479275428}
-  percent: 0.034
-  mainCam: {fileID: 0}
+  percent: 0.014
+  mainCam: {fileID: 519420031}
 --- !u!4 &513082442
 Transform:
   m_ObjectHideFlags: 0
